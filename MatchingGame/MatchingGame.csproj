@@ -50,8 +50,11 @@
     <Compile Include="MatchingGameForm.Designer.cs">
       <DependentUpon>MatchingGameForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="MatchingGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MatchingGameForm.resx">
+      <DependentUpon>MatchingGameForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
