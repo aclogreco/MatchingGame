@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MatchingGame {
@@ -92,6 +87,15 @@ namespace MatchingGame {
 				// Set its color to black.
 				secondClicked = clickedLabel;
 				secondClicked.ForeColor = Color.Black;
+
+				// If the player clicked two matching icons, keep them  
+				// black and reset firstClicked and secondClicked  
+				// so the player can click another icon.
+				if (firstClicked.Text == secondClicked.Text) {
+					firstClicked = null;
+					secondClicked = null;
+					return;
+				}
 
 				// If the player gets this far, the player
 				// clicked two different icons, so start the 
