@@ -7,3 +7,7 @@ C:\Users\bonsai\Documents\Visual Studio 2012\Projects\MatchingGame\MatchingGame\
 C:\Users\bonsai\Documents\Visual Studio 2012\Projects\MatchingGame\MatchingGame\obj\Debug\MatchingGame.csproj.GenerateResource.Cache
 C:\Users\bonsai\Documents\Visual Studio 2012\Projects\MatchingGame\MatchingGame\obj\Debug\MatchingGame.exe
 C:\Users\bonsai\Documents\Visual Studio 2012\Projects\MatchingGame\MatchingGame\obj\Debug\MatchingGame.pdb
+C:\Users\bonsai\documents\visual studio 2012\Projects\MatchingGame\MatchingGame\bin\Debug\sounds\AllIconsMatched.wav
+C:\Users\bonsai\documents\visual studio 2012\Projects\MatchingGame\MatchingGame\bin\Debug\sounds\MatchSuccessful.wav
+C:\Users\bonsai\documents\visual studio 2012\Projects\MatchingGame\MatchingGame\bin\Debug\sounds\MatchUnsuccessful.wav
+C:\Users\bonsai\documents\visual studio 2012\Projects\MatchingGame\MatchingGame\bin\Debug\sounds\IconDisappear.wav

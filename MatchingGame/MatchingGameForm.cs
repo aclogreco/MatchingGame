@@ -24,6 +24,9 @@ namespace MatchingGame {
 			"b", "b", "v", "v", "w", "w", "z", "z"
 		};
 
+		// splayer is used to play sounds
+		System.Media.SoundPlayer splayer = new System.Media.SoundPlayer();
+
 		/// <summary>
 		/// Assign each icon from the list of icons to a random square.
 		/// </summary>
@@ -94,9 +97,13 @@ namespace MatchingGame {
 				// If the player clicked two matching icons, keep them  
 				// black and reset firstClicked and secondClicked  
 				// so the player can click another icon.
+				// Also, play a sound.
 				if (firstClicked.Text == secondClicked.Text) {
 					firstClicked = null;
 					secondClicked = null;
+					// Play sound to indicate a successful match.
+					splayer.SoundLocation = @".\sounds\MatchSuccessful.wav";
+					splayer.Play();
 					return;
 				}
 
@@ -105,6 +112,8 @@ namespace MatchingGame {
 				// timer (which will wait three quarters of 
 				// a second, and then hide the icons).
 				timer1.Start();
+				splayer.SoundLocation = @".\sounds\MatchUnsuccessful.wav";
+				splayer.Play();
 			}
 		}
 
@@ -123,6 +132,9 @@ namespace MatchingGame {
 			// Hide both icons
 			firstClicked.ForeColor = firstClicked.BackColor;
 			secondClicked.ForeColor = secondClicked.BackColor;
+			// Play sound when icons are hidden
+			splayer.SoundLocation = @".\sounds\IconDisappear.wav";
+			splayer.Play();
 
 			// Reset firstClicked and secondClicked
 			// so the next time a label is 
@@ -149,8 +161,10 @@ namespace MatchingGame {
 			}
 
 			// If the loop didn't return, it didn't find any unmatched 
-			// icons. That means the user won. Show a message and close 
-			// the form.
+			// icons. That means the user won. Play a sound, show a message,  
+			// and close the form.
+			splayer.SoundLocation = @".\sounds\AllIconsMatched.wav";
+			splayer.Play();
 			MessageBox.Show("You matched all the icons!!!", "Congratulations!!!");
 			Close();
 		}
